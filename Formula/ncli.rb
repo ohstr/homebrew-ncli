@@ -11,7 +11,7 @@ class Ncli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ohstr/ncli/releases/download/v0.1.0/ncli_darwin_amd64.tar.gz"
-      sha256 "87a10082b4e075df08a9c2b36b612b195af91ee1cc66a93087add0a7441da6c1"
+      sha256 "7d721230978aa5d438c4c5a1e1fbdd27c80bc1657ab4a771ac13cb1a0c0e7ded"
 
       define_method(:install) do
         bin.install "ncli"
@@ -19,7 +19,7 @@ class Ncli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ohstr/ncli/releases/download/v0.1.0/ncli_darwin_arm64.tar.gz"
-      sha256 "dd98d5607725b947fce71d6086829697f321456e100d23790631db5a91c2f819"
+      sha256 "4284af16a8ef1da00933bc045d2f9a272559c2627f0dc207fc159f82d23d0adf"
 
       define_method(:install) do
         bin.install "ncli"
@@ -30,14 +30,14 @@ class Ncli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohstr/ncli/releases/download/v0.1.0/ncli_linux_amd64.tar.gz"
-      sha256 "63f9e450ea75098f3b395d612d36303af436e49d6bd3236303d17f22665b1bfd"
+      sha256 "7a6b35c1838b1edee0808e2515fe45140d1ff610a9344ac0145fb8e1dec75580"
       define_method(:install) do
         bin.install "ncli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohstr/ncli/releases/download/v0.1.0/ncli_linux_arm64.tar.gz"
-      sha256 "e0be21f34f550d094cd2359f42239c8198130aaf6affb38016e4199ca233d489"
+      sha256 "5bd3477856eeca7193fbc11197cd6912af8bad0d5049a88b73f019d1c5bc2fd7"
       define_method(:install) do
         bin.install "ncli"
       end
