@@ -5,21 +5,21 @@
 class Ncli < Formula
   desc "A single binary for running and operating Nostr relays: serve, stream, sync, inspect, search, export, and mine events."
   homepage "https://github.com/ohstr/ncli"
-  version "0.4.4"
+  version "0.4.5"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ohstr/ncli/releases/download/v0.4.4/ncli_darwin_amd64.tar.gz"
-      sha256 "522112cdb93848801bf868db950b616071059a840d91e7e6eba458d6b6c7edc5"
+      url "https://github.com/ohstr/ncli/releases/download/v0.4.5/ncli_darwin_amd64.tar.gz"
+      sha256 "174f79d4727588f1791c53ba99277b7f1c1271e720f935836ac808da0e9376a6"
 
       define_method(:install) do
         bin.install "ncli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ohstr/ncli/releases/download/v0.4.4/ncli_darwin_arm64.tar.gz"
-      sha256 "141e88a1a0fdef8b8f4051b5119819611c6f0923f7137749792b3bca1865feb2"
+      url "https://github.com/ohstr/ncli/releases/download/v0.4.5/ncli_darwin_arm64.tar.gz"
+      sha256 "f4d8b437a5df9fd1c602b24001ff7a30fd14d781d71132597df5b20f2063ac2c"
 
       define_method(:install) do
         bin.install "ncli"
@@ -29,15 +29,15 @@ class Ncli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/ncli/releases/download/v0.4.4/ncli_linux_amd64.tar.gz"
-      sha256 "f3cf29247a339549e0099176b42069c99ff0c84501b3994efaafc9c46be8adff"
+      url "https://github.com/ohstr/ncli/releases/download/v0.4.5/ncli_linux_amd64.tar.gz"
+      sha256 "cab0b7c6127128e403d0df869d28c19c3323cf3146ed34f7cfac8b6dfcdd41d5"
       define_method(:install) do
         bin.install "ncli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/ncli/releases/download/v0.4.4/ncli_linux_arm64.tar.gz"
-      sha256 "f60093b2919071366139dfff5496c09a3f5c11c3dac6ad0d506fe17af9e225f3"
+      url "https://github.com/ohstr/ncli/releases/download/v0.4.5/ncli_linux_arm64.tar.gz"
+      sha256 "a519d388da2c5961aed8501afc907d878e7f5050ffbfe0d85f06abefb1a280d4"
       define_method(:install) do
         bin.install "ncli"
       end
